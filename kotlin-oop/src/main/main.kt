@@ -1,9 +1,13 @@
 package main
 
+import `abstract-class`.Engineer
 import `class`.User
 import `class`.UserWithConstructor
 import `data-classes`.Person
 import `object`.Animal
+import inheritance.Barcelona
+import inheritance.Club
+import inheritance.Juventus
 
 fun main() {
     val userGreetings = User() // Object 1 from class User
@@ -23,4 +27,12 @@ fun main() {
     Animal.dataCat()
     Animal.dataDog()
 
+    // Call class inheritance
+    Juventus().clubName()
+    Barcelona().clubName()
+
+    // Call subclass from abstract class
+    val eng = Engineer("Ozi", 2)
+    eng.employeeDetails()
+    eng.dateOfBirth("26 Januari 2018")
 }
